@@ -1,0 +1,15 @@
+{
+  "name": "business-video-skills",
+  "private": true,
+  "type": "module",
+  "description": "Short video plans and sourced ad and claim rules for small businesses: agent skills, a YAML dataset and a zero-dependency claim checker.",
+  "license": "CC-BY-4.0",
+  "scripts": {
+    "test": "node test.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node checker/check.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

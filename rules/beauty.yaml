@@ -1,0 +1,61 @@
+# Beauty: ad and claim rules for short videos (TikTok, Instagram Reels, YouTube Shorts, Facebook Reels).
+# From https://github.com/viewgum/business-video-skills under CC BY 4.0. General information, not legal advice.
+# Each rule comes from ViewGum's industry pages and was checked against its source on 2026-11-20.
+group: beauty
+name: Beauty
+about: >-
+  Hair salons, barbers, nail salons, lash studios and day spas.
+industries:
+  - Hair salons
+  - Barbers
+  - Nail salons
+  - Lash studios
+  - Day spas
+rules:
+  - id: hair-dye-patch-test
+    rule: >-
+      The FDA's Coal-tar Hair Dye Safety Checklist says to do a patch test on your skin every time before
+      dyeing your hair.
+    do: >-
+      A short about hair color never skips or plays down the patch test.
+    explanation: >-
+      ViewGum's hair salon page applies it to color shorts.
+    where: United States
+    source:
+      title: Hair Dyes
+      publisher: U.S. Food and Drug Administration
+      url: https://www.fda.gov/cosmetics/cosmetic-products/hair-dyes
+      dated: current as of September 25, 2025
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/hair-salons
+    checks:
+      - match: '\b(?:patch|allergy|skin) tests? (?:is|are) (?:not needed|unnecessary|optional|not required)\b|(?<!\bnever |\bdon''t |\bdo not |\bnot )\b(?:skip(?:ped|ping)?|forget) (?:a |the )?(?:patch|allergy|skin) tests?\b|\bno (?:need for (?:a |the )?)?(?:patch|allergy|skin) tests?(?: (?:needed|required|necessary))?\b|\b(?:don''t|do not|won''t) need (?:a |the )?(?:patch|allergy|skin) tests?\b|(?<!\bnever\b[^.\n]{0,40})\bwithout (?:a |the )?(?:patch|allergy|skin) tests?\b'
+        note: "The FDA's coal-tar hair dye checklist says to do a patch test every time before dyeing hair."
+      - if_present: '\b(?:hair dye|dyeing|dye job|box dye|hair colou?r(?:ing)?|colou?r(?:ing)? (?:my|your|her|his|their) hair)\b'
+        when_missing: '\b(?:patch|allergy|skin) tests?\b'
+        note: "Talks about dyeing hair but never mentions the patch test the FDA's coal-tar hair dye checklist says to do every time."
+  - id: cosmetic-or-drug-claims
+    rule: >-
+      The FDA says a product is a drug when it is intended to treat or prevent disease, or, for articles other
+      than food, to affect the structure or any function of the body, gives claims that a product will restore
+      hair growth, reduce cellulite or regenerate cells as examples, and notes that some products, such as
+      antidandruff shampoo, are both cosmetics and drugs.
+    do: >-
+      Never say a cosmetic product, or a salon service that uses one, grows hair or treats a condition.
+    explanation: >-
+      ViewGum's hair salon page applies it to shorts.
+    where: United States
+    source:
+      title: Is It a Cosmetic, a Drug, or Both? (Or Is It Soap?)
+      publisher: U.S. Food and Drug Administration
+      url: https://www.fda.gov/cosmetics/cosmetics-laws-regulations/it-cosmetic-drug-or-both-or-it-soap
+      dated: current as of September 11, 2024
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/hair-salons
+    checks:
+      - match: '\b(?:grows?|regrows?|restores?|stimulates?|boosts?) (?:new |your |thicker |more )?hair(?: growth)?\b|\bhair (?:re)?growth\b'
+        note: A hair-growth claim makes a product a drug under FDA rules. Leave it out unless the product is lawfully marketed as a drug for that use.
+      - match: '\b(?:stops?|prevents?|reverses?|cures?|treats?|heals?) (?:hair loss|balding|thinning|alopecia|dandruff|eczema|psoriasis|acne)\b|\b(?:reduces?|removes?|gets? rid of) cellulite\b|\bregenerates? (?:cells|skin)\b'
+        note: Treating a condition or changing the body is a drug claim. Leave it out unless the product is lawfully marketed as a drug for that use.

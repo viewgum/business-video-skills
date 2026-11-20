@@ -1,0 +1,24 @@
+{
+  "name": "business-video-skills",
+  "description": "Twelve skills that turn a few lines about a small business into 15 short video ideas and a 30-day posting calendar for TikTok, Reels and Shorts, and check every line against sourced ad and claim rules for its industry.",
+  "version": "1.0.0",
+  "author": {
+    "name": "ViewGum",
+    "email": "support@viewgum.com",
+    "url": "https://viewgum.com"
+  },
+  "homepage": "https://github.com/viewgum/business-video-skills",
+  "repository": "https://github.com/viewgum/business-video-skills",
+  "license": "CC-BY-4.0",
+  "keywords": [
+    "small-business",
+    "marketing",
+    "short-form-video",
+    "tiktok",
+    "instagram-reels",
+    "youtube-shorts",
+    "content-calendar",
+    "ad-compliance"
+  ],
+  "icon": "./assets/icon.png"
+}

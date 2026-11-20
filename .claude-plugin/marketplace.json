@@ -1,0 +1,18 @@
+{
+  "name": "viewgum-business",
+  "owner": {
+    "name": "ViewGum",
+    "email": "support@viewgum.com",
+    "url": "https://viewgum.com"
+  },
+  "description": "ViewGum's free short video skills for small businesses.",
+  "plugins": [
+    {
+      "name": "business-video-skills",
+      "source": "./",
+      "description": "Short video plans for twelve kinds of small business, with a claim check against sourced ad and claim rules.",
+      "homepage": "https://github.com/viewgum/business-video-skills",
+      "license": "CC-BY-4.0"
+    }
+  ]
+}

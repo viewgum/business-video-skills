@@ -1,0 +1,39 @@
+# Legal: ad and claim rules for short videos (TikTok, Instagram Reels, YouTube Shorts, Facebook Reels).
+# From https://github.com/viewgum/business-video-skills under CC BY 4.0. General information, not legal advice.
+# Each rule comes from ViewGum's industry pages and was checked against its source on 2026-11-20.
+group: legal
+name: Legal
+about: >-
+  Law firms and lawyers.
+industries:
+  - Law firms
+rules:
+  - id: lawyer-ads-not-misleading
+    rule: >-
+      California's Rule of Professional Conduct 7.1 says a lawyer shall not make a false or misleading
+      communication about the lawyer or the lawyer's services; its comments say a communication with an
+      express guarantee or warranty of the result of a particular representation is false or misleading, and
+      that one stating or implying no fee without recovery is misleading unless it also expressly discloses
+      whether the client will be liable for costs.
+    do: >-
+      Promise no result, and read your own state's lawyer advertising rules before you post.
+    explanation: >-
+      ViewGum's law firm page applies it to shorts.
+    where: California (each state has its own lawyer advertising rules)
+    source:
+      title: Chapter 7. Information About Legal Services (Rule 7.1)
+      publisher: The State Bar of California
+      url: https://www.calbar.ca.gov/legal-professionals/rules/rules-professional-conduct/current-rules-professional-conduct/chapter-7-information-about-legal-services
+      dated: effective November 1, 2018
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/law-firms
+    checks:
+      - match: '\b(?:we (?:always|never) (?:win|lose)|never lost a case)\b|(?<!\b(?:not|never|don''t|cannot|can''t) )\bguarantee(?:s|d)? (?:that )?(?:you(?:''ll| will)? (?:win|get|recover)|(?:a |the )?(?:results?|wins?|outcomes?|settlements?|compensation))\b'
+        note: "A promised result. Under California's rule an express guarantee of a result is misleading; leave it out."
+      - match: '\b(?:won|recovered|secured|got (?:our )?clients?) (?:over |more than |up to )?\$[\d,.]+ ?(?:million|m|k|thousand)?\b'
+        note: "A case result. Check your state's rules before you show one."
+      - match: '\bno (?:fee|charge|payment)s? (?:unless|without|if (?:we|you) (?:don''t|do not)) (?:we |you )?(?:win|recover|get paid)'
+        note: "A no-fee-without-recovery offer. California's rule needs it to say whether the client will be liable for costs."
+      - match: '(?:\b(?:best|top|number one)|#1) (?:lawyers?|attorneys?|law firm)\b'
+        note: "A ranking. Keep it only if you can show it is true, and check your state's rules."

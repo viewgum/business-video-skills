@@ -1,0 +1,38 @@
+# Learning and care: ad and claim rules for short videos (TikTok, Instagram Reels, YouTube Shorts, Facebook Reels).
+# From https://github.com/viewgum/business-video-skills under CC BY 4.0. General information, not legal advice.
+# Each rule comes from ViewGum's industry pages and was checked against its source on 2026-11-20.
+group: learning
+name: Learning and care
+about: >-
+  Daycares, tutors, music schools, martial arts studios and driving schools.
+industries:
+  - Daycares
+  - Tutoring
+  - Music schools
+  - Martial arts
+  - Driving schools
+rules:
+  - id: safe-sleep-scenes
+    rule: >-
+      CPSC's safe sleep guidance is Bare is Best, nothing but a fitted sheet in a crib, bassinet or play yard,
+      with a baby always placed on their back; it names bumpers, blankets and pillows as soft objects that can
+      pose a suffocation risk, and CPSC warns about products that violate the federal ban on crib bumpers.
+    do: >-
+      Any nap scene shows a baby on their back with nothing but a fitted sheet.
+    explanation: >-
+      ViewGum's daycare page applies it to shorts.
+    where: United States
+    source:
+      title: "Safe Sleep: Cribs and Infant Products"
+      publisher: U.S. Consumer Product Safety Commission
+      url: https://www.cpsc.gov/SafeSleep
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/daycares
+    checks:
+      - match: '\b(?:crib|bassinet) bumpers?(?: pads?)?\b|\bbumper pads? (?:in|on|for|around) (?:the |a )?(?:crib|bassinet|play ?yard)\b|\bbumpers? (?:in|on|around) (?:the |a )?(?:crib|bassinet|play ?yard)\b'
+        note: Crib bumpers are a suffocation risk and banned under federal law. Leave them out of every scene.
+      - match: '\b(?:blankets?|pillows?|stuffed animals?|plush(?:ies)?|toys?|quilts?) in (?:the |a |their |his |her )?(?:crib|bassinet|play ?yard)\b'
+        note: "Bare is best: nothing but a fitted sheet in a crib, bassinet or play yard."
+      - match: '\b(?:sleeps?|naps?|sleeping|napping|put down|lay(?:ing)? down) (?:on (?:their|his|her|the) (?:tummy|stomach|belly|side)|face[- ]?down)\b'
+        note: CPSC says to always place a baby on their back to sleep.

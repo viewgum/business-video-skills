@@ -1,0 +1,38 @@
+# Auto: ad and claim rules for short videos (TikTok, Instagram Reels, YouTube Shorts, Facebook Reels).
+# From https://github.com/viewgum/business-video-skills under CC BY 4.0. General information, not legal advice.
+# Each rule comes from ViewGum's industry pages and was checked against its source on 2026-11-20.
+group: auto
+name: Auto
+about: >-
+  Auto repair shops, detailers, tire shops and body shops.
+industries:
+  - Auto repair
+  - Auto detailing
+  - Tire shops
+  - Body shops
+rules:
+  - id: warranty-third-party-parts
+    rule: >-
+      The FTC says companies can't void a warranty or deny warranty coverage solely because a customer used a
+      part made by another company, or had repairs or services done by someone not associated with the
+      company; they can refuse coverage for defects or damage caused by third-party parts or services.
+    do: >-
+      State the general rule, and point to the warranty itself.
+    explanation: >-
+      ViewGum's auto repair page applies it to shorts.
+    where: United States
+    source:
+      title: "FTC says companies' warranty restrictions were illegal"
+      publisher: Federal Trade Commission, Consumer Advice
+      url: https://consumer.ftc.gov/consumer-alerts/2022/07/ftc-says-companies-warranty-restrictions-were-illegal
+      dated: July 7, 2022
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/auto-repair
+    checks:
+      - match: '\b(?:voids?|voided|voiding|cancels?|lose|losing) (?:your |the )?warranty\b|\bwarranty (?:is|will be|gets?) (?:void(?:ed)?|cancell?ed)\b'
+        note: A warranty claim. State the general rule and point to the warranty itself.
+      - match: '\bdealer(?:ship)?[- ]only (?:service|repairs?|maintenance|warranty)\b|^(?=[^\n]*\b(?:warrant(?:y|ies)|service|repairs?|maintenance|oil change|brakes?|parts?)\b)[^\n]*?\b(?:must|have to|need to|unless you) (?:go|return|come) (?:back )?to the dealer(?:ship)?\b'
+        note: "Says only the dealer may do the work. The FTC says coverage can't be denied solely for that."
+      - match: '\b(?:keeps?|protects?|saves?) your warranty\b'
+        note: A warranty claim. State the general rule and point to the warranty itself.

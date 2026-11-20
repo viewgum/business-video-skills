@@ -1,0 +1,233 @@
+# Home and trades: ad and claim rules for short videos (TikTok, Instagram Reels, YouTube Shorts, Facebook Reels).
+# From https://github.com/viewgum/business-video-skills under CC BY 4.0. General information, not legal advice.
+# Each rule comes from ViewGum's industry pages and was checked against its source on 2026-11-20.
+group: home
+name: Home and trades
+about: >-
+  Contractors and home trades: roofing, plumbing, electrical, HVAC, remodeling, concrete, decks, landscaping,
+  painting, solar and home building.
+industries:
+  - Roofing
+  - Electrical
+  - General contracting
+  - HVAC
+  - Plumbing
+  - Remodeling
+  - Concrete
+  - Deck building
+  - Landscaping
+  - Solar
+  - Painting
+  - Home building
+rules:
+  - id: contractor-license-number
+    rule: >-
+      California's contractors board says Business and Professions Code section 7030.5 requires a license
+      number in all forms of advertising for construction that requires a contractor's license, electronic
+      transmissions included, and that a licensed contractor who advertises and contracts outside its
+      classification can be disciplined.
+    do: >-
+      If you are a licensed California contractor, put your license number in every post advertising your
+      contracting work, a short's caption included, and offer only work in a classification you hold.
+      Elsewhere, ask your state's licensing board what an ad must show.
+    explanation: >-
+      The board adds that advertising work in a classification the person is not licensed in is a misdemeanor,
+      with an exception that lets A General Engineering and B General Building contractors advertise as
+      general contractors (section 7057), and that unlicensed operators may advertise qualifying minor work if
+      the ad says they are not licensed (section 7027.2).
+    where: California (other states set their own rules)
+    source:
+      title: "Fast Facts: California License and Contracting Requirements for Online Home Improvement Marketplace Companies"
+      publisher: Contractors State License Board (California)
+      url: https://www.cslb.ca.gov/Resources/IndustryBulletins/Online_Marketplace_Fast_Facts.pdf
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/concrete
+      - https://viewgum.com/for/decks
+      - https://viewgum.com/for/electricians
+      - https://viewgum.com/for/general-contractors
+      - https://viewgum.com/for/home-builders
+      - https://viewgum.com/for/hvac
+      - https://viewgum.com/for/landscapers
+      - https://viewgum.com/for/painters
+      - https://viewgum.com/for/plumbers
+      - https://viewgum.com/for/remodelers
+      - https://viewgum.com/for/roofers
+      - https://viewgum.com/for/solar
+    checks:
+      - when_missing: '\b(?:cslb|lic(?:ense)?\.?)(?: ?(?:no\.?|number|#))?\s*#?\s*:?\s*\d{4,}'
+        note: "No contractor license number found. In California every ad for contracting work carries it, a post's caption included; check what your state asks."
+  - id: fair-housing-ads
+    rule: >-
+      The Fair Housing Act's advertising rule (24 CFR 100.75) makes it unlawful to make, print or publish any
+      notice, statement or advertisement for the sale or rental of a dwelling that indicates any preference,
+      limitation or discrimination because of race, color, religion, sex, handicap, familial status or
+      national origin.
+    do: >-
+      Describe the home and the place, never who it suits or who should live there.
+    explanation: >-
+      It covers new homes for sale, resales and rentals alike. ViewGum's home builder, real estate agent and
+      property manager pages apply it to shorts.
+    where: United States
+    source:
+      title: "24 CFR 100.75, Discriminatory advertisements, statements and notices"
+      publisher: Legal Information Institute
+      url: https://www.law.cornell.edu/cfr/text/24/100.75
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/home-builders
+      - https://viewgum.com/for/realtors
+      - https://viewgum.com/for/property-managers
+    checks:
+      - match: '^(?=[^\n]*\b(?:home|house|condo|apartment|unit|rental|listing|property|bedrooms?|neighbou?rhood|townhouse|duplex|place|lot)\b)[^\n]*?\b(?:perfect|ideal|great|made|built) for (?:a |an |the )?(?:young |growing |big |large |small |retired |single |married |new )?(?:famil(?:y|ies)|couples?|singles?|bachelors?|retirees?|empty[- ]nesters?|seniors?|kids|children|newlyweds)\b'
+        note: Says who the home suits. Describe the home and the place instead.
+      - match: '^(?=[^\n]*\b(?:home|house|condo|apartment|unit|rental|rentals|listing|property|bedrooms?|building|townhouse|duplex|community|lease|tenants?|renters?)\b)[^\n]*?(?:\b(?:no|not suitable for|not for) (?:kids|children|families|couples|wheelchairs?|wheelchair users|disabled (?:people|tenants|renters|buyers))\b|\badults?[- ]only\b)'
+        note: Limits who may live there. Describe the home instead.
+      - match: '\b(?:christian|jewish|muslim|catholic|hispanic|latino|asian|black|white) (?:neighbou?rhood|community|families|buyers?|renters?|tenants?)\b'
+        note: Names a protected group. Describe the home and the place, never the people.
+  - id: green-claims-specific
+    rule: >-
+      The FTC's Green Guides (16 CFR 260.4) say unqualified general environmental benefit claims are difficult
+      to interpret and likely convey a wide range of meanings, and that marketers should not make them.
+    do: >-
+      Never a bare eco-friendly. Name the specific benefit or benefits you mean, such as recycled content or
+      less water, clearly and prominently, and be able to back them up.
+    explanation: >-
+      The Guides say marketers can qualify a general claim with clear and prominent language that limits it to
+      a specific benefit or benefits. ViewGum's deck builder and landscaper pages apply this to composite
+      boards and water-saving yards.
+    where: United States
+    source:
+      title: "16 CFR 260.4, General environmental benefit claims (FTC Green Guides)"
+      publisher: Legal Information Institute
+      url: https://www.law.cornell.edu/cfr/text/16/260.4
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/decks
+      - https://viewgum.com/for/landscapers
+    checks:
+      - match: '\beco[- ]?friendly\b|\b(?:environmentally|earth|planet|nature)[- ]friendly\b'
+        note: A general green claim. Name the specific benefit you mean, and be able to back it up.
+      - match: '\b(?:good|better|kind|safe) for the (?:planet|environment|earth)\b|\b(?:green|sustainable|eco) (?:choice|option|products?|materials?|lumber|decking|landscaping)\b'
+        note: A general green claim. Name the specific benefit instead.
+  - id: lead-safe-certification
+    rule: >-
+      Under EPA's Renovation, Repair and Painting Rule, firms performing renovation, repair and painting
+      projects that disturb lead-based paint in homes, child care facilities and kindergartens built before
+      1978 must be EPA- or state-certified and must use certified renovators who follow specific work
+      practices.
+    do: >-
+      Claim lead-safe or RRP certification for your firm only if the firm holds it; a renovator's own
+      certificate is a separate thing.
+    explanation: >-
+      ViewGum's painting page notes that firms paid to do this work generally need the certification.
+    where: United States
+    source:
+      title: Lead Renovation, Repair and Painting Program Rules
+      publisher: U.S. Environmental Protection Agency
+      url: https://www.epa.gov/lead/lead-renovation-repair-and-painting-program-rules
+      dated: updated December 15, 2025
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/painters
+    checks:
+      - match: '\blead[- ]safe\b|\b(?:epa|rrp|lead)[- ]certified\b|\bcertified renovators?\b'
+        note: A lead-safe or certification claim. Make it only for what your firm and its renovators hold.
+  - id: silica-wet-cutting
+    rule: >-
+      OSHA's respirable crystalline silica standard for construction requires employers to limit worker
+      exposures to respirable crystalline silica, and OSHA notes that applying water to a saw blade when
+      cutting stone, rock, concrete, brick or block substantially reduces the dust it creates.
+    do: >-
+      When a short shows a concrete cut, show it done wet (ViewGum's concrete page's practice); the same
+      practice suits brick, block and stone.
+    explanation: >-
+      The standard gives employers more than one way to comply; showing wet cutting is the concrete page's
+      choice for what a video shows.
+    where: United States
+    source:
+      title: "Silica, Crystalline: Construction"
+      publisher: Occupational Safety and Health Administration
+      url: https://www.osha.gov/silica-crystalline/construction
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/concrete
+    checks:
+      - match: '\bdry[- ]?cut(?:s|ting)? (?:the |a |this |that )?(?:concrete|slab|block|brick|pavers?|stone|tile|masonry|driveway|curb)\b|\bcut(?:ting)? (?:the |a )?(?:concrete|slab|block|brick|pavers?|stone) dry\b'
+        note: Dry cutting masonry. Show cuts done wet, with water on the blade.
+  - id: older-deck-treated-wood
+    rule: >-
+      The EPA says that before 2004, wood treated with chromated arsenicals, which include chromated copper
+      arsenate (CCA), was used in residential structures such as decks and playsets; makers stopped producing
+      it for homeowner uses in December 2003, and the EPA does not require existing structures made with it to
+      be removed.
+    do: >-
+      In a short about an older deck whose wood you have not identified, say the wood may be treated rather
+      than calling it plain lumber.
+    explanation: >-
+      ViewGum's deck builder page applies it to tear-out videos.
+    where: United States
+    source:
+      title: Chromated Arsenicals (CCA)
+      publisher: U.S. Environmental Protection Agency
+      url: https://www.epa.gov/ingredients-used-pesticide-products/chromated-arsenicals-cca
+      dated: updated December 22, 2025
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/decks
+    checks:
+      - match: '\b(?:tear(?:ing)?|rip(?:ping)?|pull(?:ing)?) (?:out|off|down|up) (?:an? |the |your |this |that )?(?:old(?:er)?|existing) deck\b'
+        note: Tearing out an older deck. If it may predate 2004 and its wood is unknown, say the wood may be treated.
+      - match: '\bold(?:er)? deck\b[^.\n]{0,60}\bplain (?:lumber|wood|boards)\b|\bplain (?:lumber|wood|boards)\b[^.\n]{0,60}\bold(?:er)? deck\b'
+        note: "An older deck's wood may be CCA-treated. Do not call it plain lumber unless you know."
+  - id: solar-credit-ended
+    rule: >-
+      The IRS says the federal Residential Clean Energy Credit is not available for any property placed in
+      service after December 31, 2025.
+    do: >-
+      Never promise the federal Residential Clean Energy Credit to a new customer.
+    explanation: >-
+      The credit equaled 30% of the costs of new, qualified clean energy property for a home installed from
+      2022 through December 31, 2025, with separate limits for fuel cell property. It is nonrefundable, and
+      excess unused credit can be carried forward to later years. Other credits, such as state credits or
+      credits for businesses, are separate and not covered by this rule.
+    where: United States
+    source:
+      title: Residential Clean Energy Credit
+      publisher: IRS
+      url: https://www.irs.gov/credits-deductions/residential-clean-energy-credit
+      dated: last reviewed or updated July 4, 2026
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/solar
+    checks:
+      - match: '(?<!\bstate )\b(?:federal|residential clean energy|solar|clean energy|30 ?%) (?:tax )?credits?\b|\b30 ?% back\b[^.\n]{0,40}\b(?:solar|panels?)\b|(?<!\bstate )\btax credits?\b[^.\n]{0,40}\b(?:solar|panels?)\b|(?<!\bstate )\b(?:solar|panels?)\b[^.\n]{0,40}(?<!\bstate )\btax credits?\b'
+        note: If this means the federal Residential Clean Energy Credit, it is not available for property placed in service after December 31, 2025.
+  - id: solar-savings-and-leases
+    rule: >-
+      The FTC tells homeowners that it's hard to predict future utility rates, and that with a lease or a
+      power purchase agreement they don't own the system, so they can't claim renewable energy certificates
+      and aren't eligible for tax credits or financial incentives, which go to the system's owner.
+    do: >-
+      Leave savings figures out, and never tie a tax credit or incentive to a lease or a power purchase
+      agreement.
+    explanation: >-
+      ViewGum's solar page applies it to shorts.
+    where: United States
+    source:
+      title: Solar Power for Your Home
+      publisher: Federal Trade Commission, Consumer Advice
+      url: https://consumer.ftc.gov/articles/solar-power-your-home
+      dated: April 2022
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/solar
+    checks:
+      - match: '\bfree solar\b|(?:\bno[- ]cost|\bzero[- ]cost|\$0) (?:solar|panels|installation|system)\b'
+        note: Free or no-cost solar. Say what the customer really pays and how.
+      - match: '\b(?:save|savings?|cut|slash|lower|eliminate|wipe out)\b[^.\n]{0,40}\b(?:bills?|electric(?:ity)?|utility|power)\b|\bsave \$?\d[\d,]*\b[^.\n]{0,50}\b(?:solar|panels?)\b|\b(?:solar|panels?)\b[^.\n]{0,50}\bsave \$?\d'
+        note: A savings claim. Future utility rates are hard to predict, so leave savings figures out.
+      - match: '\bpays? for (?:itself|themselves)\b|\bpaybacks?\b|\bbreak[- ]even\b'
+        note: A payback claim depends on future rates, which are hard to predict.
+      - match: '\b(?:lease|ppa|power purchase agreement)\b[^.\n]{0,60}\b(?:credit|incentive|rebate)s?\b'
+        note: With a lease or PPA the homeowner is not eligible for tax credits or incentives.

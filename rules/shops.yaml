@@ -1,0 +1,39 @@
+# Shops: ad and claim rules for short videos (TikTok, Instagram Reels, YouTube Shorts, Facebook Reels).
+# From https://github.com/viewgum/business-video-skills under CC BY 4.0. General information, not legal advice.
+# Each rule comes from ViewGum's industry pages and was checked against its source on 2026-11-20.
+group: shops
+name: Shops
+about: >-
+  Florists, boutiques, hardware stores, bike shops, jewelers, furniture stores, bookstores and pet stores.
+industries:
+  - Florists
+  - Boutiques
+  - Hardware stores
+  - Bike shops
+  - Jewelers
+  - Furniture stores
+  - Bookstores
+  - Pet stores
+rules:
+  - id: lilies-and-cats
+    rule: >-
+      The FDA says lilies in the true lily and daylily families are very dangerous for cats: the entire plant
+      is toxic, the stem, leaves, flowers and pollen, and even the water in a vase.
+    do: >-
+      Never call an arrangement with lilies safe for a home with cats.
+    explanation: >-
+      ViewGum's florist page applies it to care shorts.
+    where: United States
+    source:
+      title: "Lovely Lilies and Curious Cats: A Dangerous Combination"
+      publisher: U.S. Food and Drug Administration
+      url: https://www.fda.gov/animal-veterinary/animal-health-literacy/lovely-lilies-and-curious-cats-dangerous-combination
+      dated: current as of September 16, 2021
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/florists
+    checks:
+      - match: '\b(?:lil(?:y|ies)|daylil(?:y|ies))\b(?![- ]free)[^.\n]{0,60}(?<!\bnot |\bnever |n''t )\b(?:pet[- ]?(?:safe|friendly)|cat[- ]?(?:safe|friendly)|safe for (?:your )?(?:cats?|pets?|kitty|kitties)|non[- ]?toxic|harmless)\b'
+        note: Lilies are very dangerous for cats. Never call them safe for pets.
+      - match: '(?<!\bnot |\bnever |n''t )\b(?:pet[- ]?safe|cat[- ]?safe|safe for (?:your )?(?:cats?|pets?))\b[^.\n]{0,40}(?<!\bno |\bwithout )\b(?:lil(?:y|ies)|daylil(?:y|ies))\b(?![- ]free)|\b(?:pet[- ]?safe|cat[- ]?safe|safe for (?:your )?(?:cats?|pets?)) (?:bouquets?|arrangements?|flowers|plants)\b(?![^.\n]{0,40}\b(?:no lilies|without lilies|lily[- ]free)\b)'
+        note: A pet-safe claim. Check every flower in it; lilies are very dangerous for cats.

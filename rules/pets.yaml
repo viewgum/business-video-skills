@@ -1,0 +1,41 @@
+# Pets: ad and claim rules for short videos (TikTok, Instagram Reels, YouTube Shorts, Facebook Reels).
+# From https://github.com/viewgum/business-video-skills under CC BY 4.0. General information, not legal advice.
+# Each rule comes from ViewGum's industry pages and was checked against its source on 2026-11-20.
+group: pets
+name: Pets
+about: >-
+  Veterinarians, pet groomers and dog trainers.
+industries:
+  - Veterinary
+  - Pet grooming
+  - Dog training
+rules:
+  - id: no-diagnosis-in-shorts
+    rule: >-
+      FDA's rules on extralabel drug use in animals (21 CFR 530.3) define a valid veterinarian-client-patient
+      relationship: the vet has assumed responsibility for medical judgments and the client has agreed to
+      follow instructions; the vet knows the animal well enough for at least a general or preliminary
+      diagnosis, which requires having recently seen it and being personally acquainted with its keeping and
+      care through examination or medically appropriate and timely visits to where it is kept; and the vet is
+      readily available for follow-up in case of adverse reactions or failure of the therapy.
+    do: >-
+      Explain in general, and never diagnose a viewer's pet or prescribe or dose a treatment in a short
+      (ViewGum's veterinarian page's practice).
+    explanation: >-
+      The page's advice rests on the relationship this rule defines; the rule itself is about extralabel drug
+      use.
+    where: United States (federal rules on extralabel drug use)
+    source:
+      title: "21 CFR 530.3, Definitions (the veterinarian-client-patient relationship)"
+      publisher: Legal Information Institute
+      url: https://www.law.cornell.edu/cfr/text/21/530.3
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/veterinarians
+    checks:
+      - match: '\byour (?:dog|cat|pet|puppy|kitten) (?:has|probably has|likely has|might have|needs) (?:an? |the )?(?:[a-z]+ )?(?:infection|disease|diabetes|cancer|allergy|allergies|worms|parasites|arthritis|fleas|mites|tumou?r|medication|antibiotics?|surgery)\b'
+        note: Sounds like a diagnosis. Explain in general and point to a vet visit.
+      - match: '\b(?:give|dose) (?:your )?(?:dog|cat|pet|puppy|kitten) (?:\d|some (?:pills?|medicine|medication|tablets?|drops)|a dose|half|a pill|a tablet|(?:an? )?(?:aspirin|ibuprofen|acetaminophen|antihistamines?|medicine|medication|pills?))|\b\d+(?:\.\d+)? ?(?:mg|ml|milligrams?|milliliters?)\b|\bdouble (?:your )?(?:dog|cat|pet)''s dose\b'
+        note: Sounds like a prescription or a dose. Leave dosing to an exam.
+      - match: '\b(?:try|use) (?:a |this |these )?home remed(?:y|ies)\b|\binstead of (?:a|the) vet\b|\b(?:no need (?:for|to see)|skip) (?:a|the) vet\b'
+        note: Steers away from an exam. Explain in general and point to a vet visit.

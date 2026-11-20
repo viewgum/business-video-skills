@@ -1,0 +1,200 @@
+# Money and insurance: ad and claim rules for short videos (TikTok, Instagram Reels, YouTube Shorts, Facebook Reels).
+# From https://github.com/viewgum/business-video-skills under CC BY 4.0. General information, not legal advice.
+# Each rule comes from ViewGum's industry pages and was checked against its source on 2026-11-20.
+group: money
+name: Money and insurance
+about: >-
+  Accountants, bookkeepers, tax preparers, financial planners, insurance agents and mortgage brokers.
+industries:
+  - Accounting and tax
+  - Tax preparation
+  - Financial planning
+  - Insurance
+  - Mortgage
+  - Bookkeeping
+rules:
+  - id: circular-230-claims
+    rule: >-
+      Treasury Circular 230 (31 CFR 10.30) says a practitioner may not, with respect to any IRS matter, use
+      any public communication or private solicitation containing a false, fraudulent or coercive statement or
+      claim, or a misleading or deceptive statement or claim.
+    do: >-
+      Promise no refund, debt relief or outcome with the IRS.
+    explanation: >-
+      ViewGum's accountant page states the rule; the practice above is this repository's reading of it for
+      shorts.
+    where: United States (practitioners before the IRS)
+    source:
+      title: "31 CFR 10.30, Solicitation (Treasury Circular 230)"
+      publisher: Legal Information Institute
+      url: https://www.law.cornell.edu/cfr/text/31/10.30
+      dated: applicable beginning August 2, 2011
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/accountants
+    checks:
+      - match: '\b(?:guaranteed?|biggest|bigger|maximum|max) (?:tax )?refunds?\b'
+        note: A promised refund. Leave it out; say what the work involves instead.
+      - match: '\b(?:make|wipe|erase) (?:your )?(?:tax |irs )?debts? (?:disappear|go away|vanish)\b|\bpennies on the dollar\b'
+        note: A debt-relief promise. Leave it out.
+      - match: '\b(?:stop|end) (?:all )?(?:irs )?(?:audits|levies|garnishments?)\b'
+        note: A promise about what the IRS will do. Leave it out.
+  - id: circular-230-certified
+    rule: >-
+      Circular 230 (31 CFR 10.30) says enrolled agents, enrolled retirement plan agents and registered tax
+      return preparers, in describing their professional designation, may not use the term certified or imply
+      an employer and employee relationship with the IRS.
+    do: >-
+      If you are an enrolled agent, enrolled retirement plan agent or registered tax return preparer, describe
+      the designation without the word certified, and never imply you work for the IRS.
+    explanation: >-
+      ViewGum's tax preparer page applies it to shorts.
+    where: United States (enrolled agents, enrolled retirement plan agents and registered tax return preparers)
+    source:
+      title: "31 CFR 10.30, Solicitation (Treasury Circular 230)"
+      publisher: Legal Information Institute
+      url: https://www.law.cornell.edu/cfr/text/31/10.30
+      dated: applicable beginning August 2, 2011
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/tax-preparers
+    checks:
+      - match: '\bcertified (?:enrolled (?:retirement plan )?agents?|eas?|(?:registered )?(?:tax )?(?:return )?preparers?)\b'
+        note: These designations may not be described with the word certified.
+      - match: '\b(?:irs|internal revenue service)[- ](?:certified|approved|endorsed|affiliated)\b|\b(?:work(?:ed|s)? (?:for|with)|partner(?:ed|s)? with|on behalf of) the (?:irs|internal revenue service)\b'
+        note: Check this does not imply that you work for the IRS or that the IRS endorses you.
+  - id: preparer-client-information
+    rule: >-
+      Federal law (26 U.S.C. 7216) makes it a misdemeanor for a person in the business of preparing, or
+      providing services in connection with preparing, federal income tax returns, or who prepares them for
+      pay, to knowingly or recklessly disclose information furnished for, or in connection with, preparing
+      such a return, or use it for any purpose other than preparing or assisting in preparing such a return,
+      subject to the exceptions in the law.
+    do: >-
+      Never use a real client's return, numbers or story; use a made-up example and say it is one.
+    explanation: >-
+      The law has exceptions, among them disclosures under other provisions of the tax code or a court order,
+      and use in preparing the state and local returns of the person the information is about. ViewGum's tax
+      preparer page applies the rule to shorts.
+    where: United States (people who prepare federal income tax returns, or are in the business of providing services connected with preparing them)
+    source:
+      title: "26 U.S. Code 7216, Disclosure or use of information by preparers of returns"
+      publisher: Legal Information Institute
+      url: https://www.law.cornell.edu/uscode/text/26/7216
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/tax-preparers
+    checks:
+      - match: '\b(?:client|customer)s?(?:''s?)?\b[^.\n]{0,40}\b(?:tax return|refund|w-?2|1099|tax bill|owed|saved|numbers)\b|\b(?:tax return|refund|w-?2|1099)\b[^.\n]{0,30}\b(?:our|my|a) (?:client|customer)\b'
+        note: "Ties tax details to a client. Use a made-up example clearly framed as one, never a real client's information."
+  - id: adviser-marketing-rule
+    rule: >-
+      The SEC's investment adviser marketing rule, issued December 22, 2020, is a merged rule that replaced
+      the earlier advertising and cash solicitation rules for registered investment advisers.
+    do: >-
+      A registered investment adviser reads the SEC marketing rule before a short quotes a client or shows
+      performance.
+    explanation: >-
+      ViewGum's financial planner page applies it to shorts.
+    where: United States (SEC-registered investment advisers)
+    source:
+      title: Investment Adviser Marketing
+      publisher: U.S. Securities and Exchange Commission
+      url: https://www.sec.gov/rules-regulations/2020/12/investment-adviser-marketing
+      dated: issued December 22, 2020; last reviewed or updated May 20, 2025
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/financial-planners
+    checks:
+      - match: '\b\d+(?:\.\d+)? ?% (?:returns?|gains?|growth|a year|per year|annually|annual returns?)\b|\b(?:returns?|gains?|performance) of \d+'
+        note: "Shows performance. An adviser reads the SEC marketing rule's conditions first."
+      - match: '\b(?:my|our) clients? (?:says?|said|earned|made|gained|saw|got|grew)\b'
+        note: "Quotes a client or a client's result. An adviser reads the SEC marketing rule first."
+      - match: '\b(?:beat|beats|outperform(?:ed|s)?) the (?:market|index)\b'
+        note: A performance claim. An adviser reads the SEC marketing rule first.
+  - id: finra-fair-and-balanced
+    rule: >-
+      FINRA Rule 2210 says a member's communications with the public must be fair and balanced, and that no
+      member may make any false, exaggerated, unwarranted, promissory or misleading statement or claim in any
+      communication.
+    do: >-
+      If you are with a FINRA member firm, promise no return, and give risks alongside any benefit.
+    explanation: >-
+      ViewGum's financial planner page states the rule; the practice above is this repository's reading of it
+      for shorts.
+    where: United States (FINRA member firms)
+    source:
+      title: Rule 2210, Communications with the Public
+      publisher: FINRA
+      url: https://www.finra.org/rules-guidance/rulebooks/finra-rules/2210
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/financial-planners
+    checks:
+      - match: '\b(?:risk[- ]free|no risk|sure thing|safe bet|double your money)\b|\bcan(?:''?t|not) lose\b|(?<!\b(?:not|never|no|cannot|can''t|don''t) )\bguaranteed? (?:returns?|income|growth|gains?)\b|\b(?:returns?|income|growth|gains?) (?:is|are) guaranteed\b'
+        note: A promissory claim. Leave it out.
+  - id: insurance-no-promises
+    rule: >-
+      The NAIC's Unfair Trade Practices Act (Model 880), a model for state insurance laws, defines as unfair
+      trade practices statements that misrepresent the benefits, advantages, conditions or terms of a policy,
+      and untrue, deceptive or misleading insurance advertising, internet advertisements and postings
+      included, when committed flagrantly and in conscious disregard of the Act or rules made under it, or
+      often enough to indicate a general business practice.
+    do: >-
+      Never promise a premium, a saving or a payout in a short (ViewGum's insurance agent page's practice),
+      and describe coverage only as the policy itself does.
+    explanation: >-
+      Check your own state's version of the law.
+    where: United States (state insurance law, as each state enacts it)
+    source:
+      title: Unfair Trade Practices Act, Model 880
+      publisher: NAIC
+      url: https://content.naic.org/sites/default/files/model-law-880.pdf
+      dated: Spring 2024
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/insurance-agents
+    checks:
+      - match: '\bsave (?:up to )?(?:\$\d|\d+ ?%)|\bsavings? of (?:up to )?\$?\d'
+        note: A savings figure. Leave it out.
+      - match: '\b(?:lowest|cheapest|best) (?:rates?|premiums?|prices?|quotes?)\b|\bguaranteed? (?:payouts?|approval|coverage|savings?|acceptance|rates?)\b'
+        note: A promise about price or a policy. Leave it out.
+      - match: '\b(?:covers?|covered for) (?:everything|anything|it all)\b|\bfully covered\b'
+        note: Overstates what a policy covers. Describe coverage as the policy does.
+  - id: credit-ad-terms
+    rule: >-
+      Under Regulation Z (12 CFR 1026.24), an ad for closed-end credit that states a rate of finance charge
+      must state it as an annual percentage rate, using that term, and say if it may increase after
+      consummation; and an ad that states the amount or percentage of a down payment (in a credit sale), the
+      number of payments or period of repayment, the amount of a payment, or the amount of a finance charge
+      must also state, as applicable, the down payment, the terms of repayment over the full term including
+      any balloon payment, and the annual percentage rate, with whether it may increase after consummation.
+    do: >-
+      Leave rates and payment terms out of a short, or include every disclosure Regulation Z requires.
+      ViewGum's mortgage broker page's practice is to name no numbers.
+    explanation: >-
+      The CFPB's official interpretation of 1026.24(d)(1) limits the down payment trigger to credit sales and
+      says statements such as no down payment do not trigger it. A term counts even when the ad does not state
+      it but it can readily be worked out (80 percent financing in a credit sale means 20 percent down). A
+      short that states or implies no rate and none of those terms does not trigger these disclosures.
+      Paragraph (f) adds rate and payment requirements for many ads for credit secured by a dwelling, and
+      paragraph (g) gives television and radio ads an alternative.
+    where: United States (closed-end consumer credit)
+    source:
+      title: "12 CFR 1026.24, Advertising (Regulation Z)"
+      publisher: Legal Information Institute
+      url: https://www.law.cornell.edu/cfr/text/12/1026.24
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/mortgage-brokers
+    checks:
+      - match: '\b(?!0(?:\.0+)? ?%)\d+(?:\.\d+)? ?% (?:down|down payment)\b|\$(?!0\b)\d[\d,]* (?:down|down payment)\b'
+        note: A down payment figure. In a credit sale it triggers the repayment terms and APR as well; for a loan, keep the numbers out or check Regulation Z.
+      - match: '\$\d[\d,]*(?:\.\d+)? ?(?:a|per|/) ?(?:mo|month)\b|\$\d[\d,]*(?:\.\d+)? monthly payments?\b|\bpayments? (?:is|are|of|as low as|from|would be) \$\d'
+        note: A payment amount. It triggers the down payment, repayment terms and APR as well; or leave it out.
+      - match: '\b\d+ (?:monthly )?payments\b|\b\d+[- ]year (?:fixed|loan|mortgage|term)\b|\b(?:repay|pay (?:it )?off|paid off) (?:in|over) \d+ (?:months|years)\b'
+        note: A number of payments or period of repayment. It triggers the down payment and APR as well.
+      - match: '\b(?:rates?|interest|apr) (?:as low as |of |at |from )?\d|\b\d+(?:\.\d+)? ?% (?:apr|rate|interest|fixed|arm)\b'
+        note: A rate. State it as the annual percentage rate (APR), and say if it may increase.
+      - match: '\$\d[\d,]* (?:in )?finance charges?\b|\bfinance charges? (?:is|are|of|under|below|totals?) \$?\d'
+        note: A finance charge amount. It triggers the down payment, repayment terms and APR as well.

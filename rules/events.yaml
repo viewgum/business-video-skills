@@ -1,0 +1,46 @@
+# Events and stays: ad and claim rules for short videos (TikTok, Instagram Reels, YouTube Shorts, Facebook Reels).
+# From https://github.com/viewgum/business-video-skills under CC BY 4.0. General information, not legal advice.
+# Each rule comes from ViewGum's industry pages and was checked against its source on 2026-11-20.
+group: events
+name: Events and stays
+about: >-
+  Photographers, wedding venues, event planners, inns and hotels, and DJs.
+industries:
+  - Photography
+  - Wedding venues
+  - Event planning
+  - Inns and hotels
+  - DJs
+rules:
+  - id: total-price-tickets-and-stays
+    rule: >-
+      The FTC's Rule on Unfair or Deceptive Fees (16 CFR Part 464) says any ad that states a price for
+      live-event tickets or short-term lodging, on screen or out loud, must disclose the total price clearly
+      and conspicuously and more prominently than other pricing information, except that a final amount of
+      payment, where shown, must be at least as prominent as the total price; in a communication with both
+      pictures and sound, the disclosure must appear in both at the same time.
+    do: >-
+      When a short gives a ticket or room price, give the total price with every mandatory fee, more
+      prominently than other price details (if you show a final amount of payment, make it at least as
+      prominent as the total); in a video with sound, show it and say it at the same time.
+    explanation: >-
+      The total price includes every mandatory fee; government charges, shipping charges and optional extras
+      may be left out. Short-term lodging includes hotels, motels, inns and vacation rentals.
+    where: United States (live-event tickets and short-term lodging)
+    source:
+      title: "16 CFR Part 464, Rule on Unfair or Deceptive Fees (live-event tickets and short-term lodging)"
+      publisher: Legal Information Institute
+      url: https://www.law.cornell.edu/cfr/text/16/part-464
+      dated: published in the Federal Register January 10, 2025
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/event-planners
+      - https://viewgum.com/for/inns-and-hotels
+      - https://viewgum.com/for/wedding-venues
+    checks:
+      - match: '\$\s?\d[\d,]*(?:\.\d\d)?\s?(?:/|a|per)\s?(?:night|nt|ticket|room|stay)\b|\$\s?\d[\d,]*(?:\.\d\d)? (?:tickets?|rooms?|nightly|a night|per night)\b'
+        note: A ticket or room price. Give the total price with every mandatory fee, more prominently than other price details, on screen and out loud if the video has sound.
+      - match: '\b(?:tickets?|rooms?|suites?|stays?|nights?|admission|hotel|inn|cabin)\b[^.\n]{0,40}\$\s?\d'
+        note: A ticket or stay price. Give the total price with every mandatory fee, on screen and out loud if the video has sound.
+      - match: '\bresort fees?\b|^(?=[^\n]*\b(?:tickets?|rooms?|suites?|stays?|nights?|nightly|hotel|inn|cabin|lodging|admission|concert|show|festival)\b)[^\n]*?(?:(?:\bplus|\+) ?(?:taxes and )?(?:fees|service fees?|cleaning fees?)\b|\b(?:booking|cleaning|convenience|processing|facility|amenity|service) fees?\b)'
+        note: A separate fee. Fold every mandatory fee into the total price you show.

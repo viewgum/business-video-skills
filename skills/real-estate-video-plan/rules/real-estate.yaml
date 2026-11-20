@@ -1,0 +1,62 @@
+# Real estate: ad and claim rules for short videos (TikTok, Instagram Reels, YouTube Shorts, Facebook Reels).
+# From https://github.com/viewgum/business-video-skills under CC BY 4.0. General information, not legal advice.
+# Each rule comes from ViewGum's industry pages and was checked against its source on 2026-11-20.
+group: real-estate
+name: Real estate
+about: >-
+  Real estate agents and property managers.
+industries:
+  - Real estate agents
+  - Property management
+rules:
+  - id: fair-housing-ads
+    rule: >-
+      The Fair Housing Act's advertising rule (24 CFR 100.75) makes it unlawful to make, print or publish any
+      notice, statement or advertisement for the sale or rental of a dwelling that indicates any preference,
+      limitation or discrimination because of race, color, religion, sex, handicap, familial status or
+      national origin.
+    do: >-
+      Describe the home and the place, never who it suits or who should live there.
+    explanation: >-
+      It covers new homes for sale, resales and rentals alike. ViewGum's home builder, real estate agent and
+      property manager pages apply it to shorts.
+    where: United States
+    source:
+      title: "24 CFR 100.75, Discriminatory advertisements, statements and notices"
+      publisher: Legal Information Institute
+      url: https://www.law.cornell.edu/cfr/text/24/100.75
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/home-builders
+      - https://viewgum.com/for/realtors
+      - https://viewgum.com/for/property-managers
+    checks:
+      - match: '^(?=[^\n]*\b(?:home|house|condo|apartment|unit|rental|listing|property|bedrooms?|neighbou?rhood|townhouse|duplex|place|lot)\b)[^\n]*?\b(?:perfect|ideal|great|made|built) for (?:a |an |the )?(?:young |growing |big |large |small |retired |single |married |new )?(?:famil(?:y|ies)|couples?|singles?|bachelors?|retirees?|empty[- ]nesters?|seniors?|kids|children|newlyweds)\b'
+        note: Says who the home suits. Describe the home and the place instead.
+      - match: '^(?=[^\n]*\b(?:home|house|condo|apartment|unit|rental|rentals|listing|property|bedrooms?|building|townhouse|duplex|community|lease|tenants?|renters?)\b)[^\n]*?(?:\b(?:no|not suitable for|not for) (?:kids|children|families|couples|wheelchairs?|wheelchair users|disabled (?:people|tenants|renters|buyers))\b|\badults?[- ]only\b)'
+        note: Limits who may live there. Describe the home instead.
+      - match: '\b(?:christian|jewish|muslim|catholic|hispanic|latino|asian|black|white) (?:neighbou?rhood|community|families|buyers?|renters?|tenants?)\b'
+        note: Names a protected group. Describe the home and the place, never the people.
+  - id: realtor-true-picture
+    rule: >-
+      Article 12 of the National Association of REALTORS Code of Ethics says REALTORS shall be honest and
+      truthful in their real estate communications and shall present a true picture in their advertising,
+      marketing and other representations.
+    do: >-
+      Show homes, results and services as they are, and promise no sale price, sale time or offer you cannot
+      back up.
+    explanation: >-
+      ViewGum's real estate agent page states the rule; the practice above is this repository's reading of it
+      for shorts.
+    where: Members of the National Association of REALTORS
+    source:
+      title: "2026 Code of Ethics and Standards of Practice"
+      publisher: National Association of REALTORS
+      url: https://www.nar.realtor/about-nar/governing-documents/code-of-ethics/2026-code-of-ethics-standards-of-practice
+      dated: effective January 1, 2026
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/realtors
+    checks:
+      - match: '\bguaranteed? (?:sale|to sell|offers?|sold|price)\b|\b(?:sell|sold) (?:your (?:home|house) )?in \d+ days\b'
+        note: A promised sale or sale time. Keep it only if you really give it, with its terms.

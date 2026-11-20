@@ -1,0 +1,122 @@
+# Food and drink: ad and claim rules for short videos (TikTok, Instagram Reels, YouTube Shorts, Facebook Reels).
+# From https://github.com/viewgum/business-video-skills under CC BY 4.0. General information, not legal advice.
+# Each rule comes from ViewGum's industry pages and was checked against its source on 2026-11-20.
+group: food
+name: Food and drink
+about: >-
+  Restaurants, cafes, bakeries, food trucks, pizzerias, caterers, bars, breweries, wineries, distilleries,
+  liquor stores and convenience stores.
+industries:
+  - Cafes
+  - Restaurants
+  - Bakeries
+  - Convenience stores
+  - Food trucks
+  - Pizzerias
+  - Catering
+  - Bars and pubs
+  - Breweries
+  - Wineries
+  - Distilleries
+  - Liquor stores
+rules:
+  - id: allergen-free-claims
+    rule: >-
+      The FDA names nine major food allergens: milk, eggs, fish, crustacean shellfish, tree nuts, peanuts,
+      wheat, soybeans and sesame.
+    do: >-
+      Never say a dish, drink or baked good is free of a major allergen unless you checked its ingredients,
+      your suppliers and the chance of cross-contact in your kitchen.
+    explanation: >-
+      ViewGum's restaurant, cafe and bakery pages apply it to shorts.
+    where: United States
+    source:
+      title: Food Allergies
+      publisher: U.S. Food and Drug Administration
+      url: https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/food-allergies
+      dated: current as of March 11, 2026
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/restaurants
+      - https://viewgum.com/for/cafes
+      - https://viewgum.com/for/bakeries
+    checks:
+      - match: '\b(?:nut|peanut|tree[- ]nut|dairy|milk|egg|soy|wheat|fish|shellfish|sesame|allergen|allergy)[- ]free\b'
+        note: Says an item is free of an allergen. Keep it only if you checked the ingredients, suppliers and cross-contact.
+      - match: '\b(?:free (?:of|from)|without|no) (?:any )?(?:nuts?|peanuts?|tree nuts?|dairy|milk|eggs?|soy|soybeans?|wheat|fish|shellfish|crustacean shellfish|crustaceans?|sesame)\b'
+        note: Says an item has none of an allergen. Keep it only if you checked.
+      - match: '\b(?:allergy|allergen)[- ](?:friendly|safe)\b|\bsafe for (?:people with |anyone with |kids with )?(?:food |nut |peanut )?allergies\b'
+        note: A general allergy-safe claim. Name the allergen instead, and keep it only if you checked.
+  - id: gluten-free-definition
+    rule: >-
+      Under the FDA's gluten-free labeling rule (21 CFR 101.91), a food labeled gluten-free is inherently
+      gluten free, or contains no ingredient that is a gluten-containing grain, no ingredient made from one
+      that was not processed to remove gluten, and no processed ingredient that brings the food to 20 parts
+      per million of gluten or more; any unavoidable gluten must be less than 20 parts per million.
+    do: >-
+      Call a dish gluten-free only when it meets the FDA's gluten-free definition.
+    explanation: >-
+      The regulation applies to packaged foods the FDA regulates, not to foods whose labeling the USDA or the
+      Alcohol and Tobacco Tax and Trade Bureau (TTB) regulates, such as most alcoholic beverages. For
+      restaurants, the FDA recommends that a gluten-free claim on a menu be consistent with its definition.
+    where: United States (FDA-regulated packaged foods; the FDA recommends restaurant menus follow it)
+    source:
+      title: Questions and Answers on the Gluten-Free Food Labeling Final Rule
+      publisher: U.S. Food and Drug Administration
+      url: https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/questions-and-answers-gluten-free-food-labeling-final-rule
+      dated: current as of June 30, 2022
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/restaurants
+      - https://viewgum.com/for/cafes
+      - https://viewgum.com/for/bakeries
+    checks:
+      - match: '\bgluten[- ]?free\b|\b(?:no|free of|without) gluten\b|\bceliac[- ](?:safe|friendly)\b'
+        note: "A gluten-free claim. Keep it only if the item meets the FDA definition: no gluten grain or unprocessed gluten ingredient, and under 20 parts per million."
+  - id: tobacco-21
+    rule: >-
+      The FDA says it is illegal for a retailer to sell any tobacco product, e-cigarettes included, to anyone
+      under 21, and that the federal minimum age of sale applies to all retail establishments and persons with
+      no exceptions.
+    do: >-
+      Leave tobacco and vapes out of your shorts (ViewGum's convenience store page's practice).
+    explanation: >-
+      The rule itself is about sales; leaving the products out of shorts is the page's practice.
+    where: United States
+    source:
+      title: Tobacco 21
+      publisher: U.S. Food and Drug Administration
+      url: https://www.fda.gov/tobacco-products/retail-sales-tobacco-products/tobacco-21
+      dated: current as of August 7, 2025
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/convenience-stores
+    checks:
+      - match: '\b(?:vapes?|e-?cigs?|e-?cigarettes?|cigarettes?|cigars?|cigarillos?|tobacco|nicotine|hookah)\b|\bvaping (?:supplies|products|gear|kits?|devices?)\b'
+        note: "Tobacco or vapes. The convenience store page's practice is to leave them out of shorts."
+  - id: tiktok-regulated-goods
+    rule: >-
+      TikTok's Community Guidelines say it doesn't allow trade, marketing or providing access to regulated,
+      prohibited or high-risk goods and services, and that verified business accounts and verified TikTok Shop
+      sellers may be allowed to sell or market some regulated items if they meet strict requirements.
+    do: >-
+      Before a TikTok post shows or promotes alcohol, tobacco, vapes or lottery, check TikTok's rules for that
+      item and whether your account is approved, post by post. ViewGum's convenience store page advises
+      leaving them out.
+    explanation: >-
+      TikTok's overview does not list the items; the list of alcohol, tobacco, vapes and lottery is the
+      convenience store page's.
+    where: TikTok
+    source:
+      title: "Community Guidelines: Policies & engagement"
+      publisher: TikTok
+      url: https://www.tiktok.com/safety/en/policies-and-engagement/overview?cgversion=2026H2update
+      dated: released August 25, 2026, effective September 24, 2026
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/convenience-stores
+    checks:
+      - match: '\b(?:distilled|craft|fine|premium) spirits\b|\b(?:beers?|wines?|liquor|alcohol(?:ic)?(?![- ]free)|vodka|whiske?y|bourbon|tequila|rum|gin|champagne|prosecco|hard seltzers?|cocktails?)\b'
+        note: Alcohol. On TikTok, check its rules on regulated goods, and whether your account is approved, before you post it.
+      - match: '\b(?:lottery|lotto|scratch[- ]?offs?|scratchers)\b'
+        note: Lottery. On TikTok, check its rules on regulated goods, and whether your account is approved, before you post it.

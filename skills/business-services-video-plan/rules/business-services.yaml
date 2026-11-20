@@ -1,0 +1,42 @@
+# Business services: ad and claim rules for short videos (TikTok, Instagram Reels, YouTube Shorts, Facebook Reels).
+# From https://github.com/viewgum/business-video-skills under CC BY 4.0. General information, not legal advice.
+# Each rule comes from ViewGum's industry pages and was checked against its source on 2026-11-20.
+group: business-services
+name: Business services
+about: >-
+  IT services, commercial cleaning, staffing, printing, logistics and manufacturing.
+industries:
+  - IT services
+  - Commercial cleaning
+  - Staffing
+  - Printing
+  - Logistics
+  - Manufacturing
+rules:
+  - id: security-claims
+    rule: >-
+      Section 5 of the FTC Act declares unfair or deceptive acts or practices in or affecting commerce
+      unlawful.
+    do: >-
+      Never call a setup unhackable or breach-proof; show what a safeguard does.
+    explanation: >-
+      ViewGum's IT services page applies it to security claims in shorts.
+    where: United States
+    source:
+      title: "15 U.S. Code 45, Unfair methods of competition unlawful; prevention by Commission (FTC Act, section 5)"
+      publisher: Legal Information Institute
+      url: https://www.law.cornell.edu/uscode/text/15/45
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/it-services
+    checks:
+      - match: '(?<!\bnothing is |\bno system is |\bnothing''s |\bisn''t |\bis not |\bno such thing as )\b(?:unhackable|hack[- ]?proof|breach[- ]?proof|bullet[- ]?proof|impenetrable)\b|(?<!\b(?:no system is|nothing is|isn''t|is not|never) )\b100 ?% (?:secure|safe|protected)\b'
+        note: An absolute security claim. Show what the safeguard does instead.
+      - match: '(?<!\bno system is |\bnothing is |\bnot |\bnever |\bisn''t )\b(?:completely|totally|fully|perfectly) (?:secure|safe|protected)\b'
+        note: An absolute security claim. Show what the safeguard does instead.
+      - match: '(?<!\b(?:no|not|never|cannot|can''t) )\bguaranteed? (?:security|protection)\b|\bzero risk\b'
+        note: No safeguard makes a breach impossible. Leave it out and show what the safeguard does.
+      - match: '(?<!\b(?:no|not|never|cannot|can''t) )\bguaranteed? uptime\b|\bzero downtime\b'
+        note: An uptime promise. Keep it only if your contract gives it, with its terms.
+      - match: '\b(?:never|can''t|cannot|won''t) (?:be|get) (?:hacked|breached)\b|\bhackers? (?:can''t|cannot|won''t|will never) (?:breach|get (?:in|into)|hack)\b'
+        note: "Promises a system can't be breached. Leave it out."

@@ -1,0 +1,84 @@
+# Health and wellness: ad and claim rules for short videos (TikTok, Instagram Reels, YouTube Shorts, Facebook Reels).
+# From https://github.com/viewgum/business-video-skills under CC BY 4.0. General information, not legal advice.
+# Each rule comes from ViewGum's industry pages and was checked against its source on 2026-11-20.
+group: health
+name: Health and wellness
+about: >-
+  Dentists, chiropractors, physical therapists, gyms, personal trainers, med spas, eye care and yoga studios.
+industries:
+  - Dental
+  - Gyms
+  - Chiropractic
+  - Physical therapy
+  - Med spas
+  - Personal training
+  - Eye care
+  - Yoga studios
+rules:
+  - id: health-claims-evidence
+    rule: >-
+      The FTC's Health Products Compliance Guidance says that, as a general rule, claims about the health
+      benefits or safety of health-related products require substantiation in the form of competent and
+      reliable scientific evidence.
+    do: >-
+      Explain how the body works in general, and promise no cure, relief, recovery time, weight loss, body
+      change or result by a date.
+    explanation: >-
+      The promise-nothing practice is how ViewGum's dentist, chiropractor, physical therapist and gym pages
+      apply the guidance to shorts.
+    where: United States
+    source:
+      title: Health Products Compliance Guidance
+      publisher: Federal Trade Commission
+      url: https://www.ftc.gov/business-guidance/resources/health-products-compliance-guidance
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/chiropractors
+      - https://viewgum.com/for/dentists
+      - https://viewgum.com/for/gyms
+      - https://viewgum.com/for/physical-therapists
+    checks:
+      - match: '(?<!\b(?:not|never|no) )\bcure[sd]?\b(?! (?:the |a |our |your |each |every )?(?:resin|composite|concrete|paint|coating|sealant|epoxy|glue|adhesive|gel|polish|light|lamp|meat|bacon|ham|salmon|fish|cheese))'
+        note: A cure claim. Explain how things work in general instead.
+      - match: '\b(?:guaranteed?|permanent|instant|immediate|lasting) (?:relief|results?|fix|cure|recovery)\b|\b(?:get rid of|eliminate|fix|reverse|end) (?:your |the )?(?:back pain|neck pain|pain|sciatica|arthritis|headaches|migraines|cavities|gum disease|tooth decay)\b'
+        note: A promised result. Explain it in general instead.
+      - match: '\bpain[- ]free\b|\bno more (?:pain|back pain|headaches)\b'
+        note: Promises freedom from pain. Explain in general instead.
+      - match: '\b(?:lose|drop|shed|burn) (?:(?:\d+|one|two|three|four|five|ten|twenty) ?(?:lbs?|pounds?|kg|kilos?|inches?|sizes?)|weight|fat|belly fat)\b'
+        note: A weight-loss promise. Leave it out.
+      - match: '\b(?:results?|relief|lose|drop|heal(?:ed)?|recover(?:ed|y)?|pain[- ]free|abs|six[- ]pack|in shape|fit)\b(?<!\b(?:lab|test|blood|x-ray) results?)[^.\n]{0,40}\b(?:in|within) (?:\d+|one|two|three|four|five|six|seven|ten|thirty) (?:days?|weeks?|months?)\b'
+        note: A result by a date. Leave the date out.
+      - match: '\b(?:clinically|scientifically|medically) proven\b'
+        note: A proof claim needs competent and reliable scientific evidence for this exact use.
+  - id: patient-authorization
+    rule: >-
+      HIPAA's privacy rule (45 CFR 164.508) says a covered entity must obtain an authorization for any use or
+      disclosure of protected health information for marketing, except a face-to-face communication made by
+      the covered entity to an individual or a promotional gift of nominal value provided by the covered
+      entity; if a third party pays the covered entity for the marketing, the authorization must say so.
+    do: >-
+      If your practice is a HIPAA covered entity, keep real patients, and anything that identifies them, out
+      of your shorts unless you have a valid authorization signed by the patient or their personal
+      representative.
+    explanation: >-
+      That includes a name, a face, a story, and identifiable charts, X-rays, scans or appointment screens in
+      the background. An authorization signed by a personal representative must describe the representative's
+      authority to act for the patient. ViewGum's dentist and chiropractor pages leave real patients out
+      altogether; its physical therapist page allows a recovery story with that authorization.
+    where: United States (HIPAA covered entities)
+    source:
+      title: "45 CFR 164.508, Uses and disclosures for which an authorization is required"
+      publisher: Legal Information Institute
+      url: https://www.law.cornell.edu/cfr/text/45/164.508
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/chiropractors
+      - https://viewgum.com/for/dentists
+      - https://viewgum.com/for/physical-therapists
+    checks:
+      - match: '\bpatient (?:story|stories|testimonials?|results?|transformations?|case|spotlight|of the (?:week|month))\b|\bone of (?:our|my) patients\b|\b(?:a|our|my) patient (?:came in|who|with|named|called)\b'
+        note: Describes a real patient. A HIPAA covered entity needs their signed authorization, or leaves them out.
+      - match: '\bbefore[- ](?:and[- ]|&[- ]?)?after\b'
+        note: Before and after pictures of a real patient need their signed authorization if you are a covered entity.
+      - match: '\bpatient(?:''s|s'')? (?:x-?rays?|charts?|scans?|records?|files?)\b|\b(?:schedule|appointment) (?:screen|book|calendar)\b'
+        note: "Make sure no patient's chart, X-ray, scan or appointment can be read on camera."

@@ -1,0 +1,156 @@
+# Every business: ad and claim rules for short videos (TikTok, Instagram Reels, YouTube Shorts, Facebook Reels).
+# From https://github.com/viewgum/business-video-skills under CC BY 4.0. General information, not legal advice.
+# Each rule comes from ViewGum's industry pages and was checked against its source on 2026-11-20.
+group: every-business
+name: Every business
+about: >-
+  Rules every small business meets when it posts videos about itself, whatever it sells.
+rules:
+  - id: ftc-paid-or-gifted-posts
+    rule: >-
+      When someone endorsing a business has been paid or given something of value for it, and the audience
+      would not expect that, the FTC says the connection should be disclosed clearly and conspicuously.
+    do: >-
+      Paid or gifted posts about your business say so, plainly, in the post itself.
+    explanation: >-
+      The FTC's answers on its Endorsement Guides say an ad is misleading unless such a connection is made
+      clear, and that this is usually true when the endorser has been paid or given something of value to tout
+      the product. The Guides themselves (16 CFR 255.5, the next rule) say a material connection must be
+      disclosed clearly and conspicuously when a significant minority of the audience does not understand or
+      expect it. Every ViewGum industry page states this rule.
+    where: United States
+    source:
+      title: "FTC's Endorsement Guides: What People Are Asking"
+      publisher: Federal Trade Commission
+      url: https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/accountants
+      - https://viewgum.com/for/auto-repair
+      - https://viewgum.com/for/bakeries
+      - https://viewgum.com/for/cafes
+      - https://viewgum.com/for/chiropractors
+      - https://viewgum.com/for/concrete
+      - https://viewgum.com/for/convenience-stores
+      - https://viewgum.com/for/daycares
+      - https://viewgum.com/for/decks
+      - https://viewgum.com/for/dentists
+      - https://viewgum.com/for/electricians
+      - https://viewgum.com/for/event-planners
+      - https://viewgum.com/for/financial-planners
+      - https://viewgum.com/for/florists
+      - https://viewgum.com/for/general-contractors
+      - https://viewgum.com/for/gyms
+      - https://viewgum.com/for/hair-salons
+      - https://viewgum.com/for/home-builders
+      - https://viewgum.com/for/hvac
+      - https://viewgum.com/for/inns-and-hotels
+      - https://viewgum.com/for/insurance-agents
+      - https://viewgum.com/for/it-services
+      - https://viewgum.com/for/landscapers
+      - https://viewgum.com/for/law-firms
+      - https://viewgum.com/for/mortgage-brokers
+      - https://viewgum.com/for/painters
+      - https://viewgum.com/for/photographers
+      - https://viewgum.com/for/physical-therapists
+      - https://viewgum.com/for/plumbers
+      - https://viewgum.com/for/property-managers
+      - https://viewgum.com/for/realtors
+      - https://viewgum.com/for/remodelers
+      - https://viewgum.com/for/restaurants
+      - https://viewgum.com/for/roofers
+      - https://viewgum.com/for/solar
+      - https://viewgum.com/for/tax-preparers
+      - https://viewgum.com/for/veterinarians
+      - https://viewgum.com/for/wedding-venues
+    checks:
+      - match: '\b(?:was|were|got|been|is|are) (?:gifted|comped)\b|#gifted\b|\bgifted (?:to (?:me|us)|by)\b'
+        note: Mentions a gift. If the person posting got it free, the post says so plainly.
+      - match: '\b(?:sent|gave) (?:me|us) (?:this|these|a|an|some|free)\b|\b(?:paid|paying) (?:me|us) to\b'
+        note: Something was given or paid for. Say so plainly in the post itself.
+      - match: '\b(?:sponsored|paid partnership|in partnership with)\b'
+        note: Make sure the disclosure is clear to every viewer, in the post itself.
+  - id: ftc-material-connections
+    rule: >-
+      Under the FTC's Endorsement Guides (16 CFR 255.5), a connection between an endorser and a seller that
+      might materially affect the weight or credibility of the endorsement, and that the audience does not
+      reasonably expect, must be disclosed clearly and conspicuously; a material connection needs disclosing
+      when a significant minority of the audience does not understand or expect it.
+    do: >-
+      When you recommend or feature a vendor or brand that pays you, gives you something or has a business,
+      family or personal tie to you, say so in the post.
+    explanation: >-
+      The Guides say material connections can include a business, family or personal relationship, monetary
+      payment, or the provision of free or discounted products. ViewGum's event planner and photographer pages
+      apply the rule to recommending vendors and featuring brands.
+    where: United States
+    source:
+      title: "16 CFR 255.5, Disclosure of material connections (FTC Endorsement Guides)"
+      publisher: Legal Information Institute
+      url: https://www.law.cornell.edu/cfr/text/16/255.5
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/event-planners
+      - https://viewgum.com/for/photographers
+    checks:
+      - match: '\b(?:preferred|recommended|favou?rite|trusted) (?:vendors?|partners?|suppliers?|brands?)\b'
+        note: Recommends another business. If they pay you, give you something or are tied to you, say so.
+      - match: '(?<!\bno |\bnot an? |\bwithout an? |\bnever an? )\b(?:affiliate|referral) (?:links?|codes?|fees?|programs?)\b|\b(?:earn|get|make) (?:a )?commissions?\b'
+        note: A paid tie to the business you recommend. Disclose it clearly in the post.
+  - id: ftc-fake-reviews
+    rule: >-
+      The FTC's rule on consumer reviews (16 CFR 465.2) bars a business from writing, creating or selling a
+      review or testimonial that materially misrepresents that the reviewer exists, that they used or
+      otherwise experienced the product, service or business, or what that experience was, and from buying
+      such a review, or spreading such a testimonial about the business or the products or services it sells,
+      when it knew or should have known of the misrepresentation.
+    do: >-
+      Never invent a review, a reviewer or a customer's words, and never change a real review in a way that
+      changes what the person experienced.
+    explanation: >-
+      The buying and spreading parts do not apply to reviews that came from a general request to purchasers to
+      post reviews, or to reviews a business merely hosts. ViewGum's event planner, inn, photographer and
+      wedding venue pages apply the rule to shorts: a short never invents a client's or a guest's praise.
+    where: United States
+    source:
+      title: "16 CFR 465.2, Fake or false consumer reviews, consumer testimonials, or celebrity testimonials"
+      publisher: Legal Information Institute
+      url: https://www.law.cornell.edu/cfr/text/16/465.2
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/event-planners
+      - https://viewgum.com/for/inns-and-hotels
+      - https://viewgum.com/for/photographers
+      - https://viewgum.com/for/wedding-venues
+    checks:
+      - match: '\b(?:customers?|clients?|guests?|patients?|couples?|families|parents|homeowners|members|diners|students) (?:say|says|said|tell us|love|loved|rave|are raving|agree)\b'
+        note: Speaks for customers. Use only real words from real customers, with their meaning unchanged.
+      - match: '\b(?:5|five)[- ]stars?\b|\brated \d(?:\.\d)? ?(?:/ ?5|out of 5|stars?)\b|\b\d\.\d stars?\b'
+        note: A rating. Show it only if it is real and current, as the review site shows it.
+      - match: '\btestimonials?\b|\b(?:customer|client|guest|patient|online|five[- ]star|5[- ]star|our|real|glowing|rave) reviews?\b|\breviews? (?:say|said|from (?:our|happy|real))\b'
+        note: Mentions reviews. Any review shown is real, from someone who used the business, with its meaning unchanged.
+  - id: copyright-ownership
+    rule: >-
+      The U.S. Copyright Office says the copyright in a work initially belongs to the author or authors who
+      created it; for a work made for hire, the party that hired the creator is the author.
+    do: >-
+      Use only photos, clips and music you have the right to use: your own work whose rights you kept, or work
+      you have permission or a license for.
+    explanation: >-
+      Circular 1 also covers transfers and licenses, and limits on a copyright owner's rights such as fair
+      use. ViewGum's photographer page applies the rule to photos; clips and music are this repository's
+      extension of it.
+    where: United States
+    source:
+      title: Circular 1, Copyright Basics
+      publisher: U.S. Copyright Office
+      url: https://www.copyright.gov/circs/circ01.pdf
+      dated: revised September 2021
+    checked: "2026-11-20"
+    pages:
+      - https://viewgum.com/for/photographers
+    checks:
+      - match: '\b(?:found|downloaded|grabbed|pulled|took) (?:a|an|this|these|the|some|that) (?:photos?|pictures?|pics|images?|clips?|videos?|songs?|music|footage) (?:online|on the internet|on social media)\b|\b(?:photos?|pictures?|images?|clips?|songs?|music|footage) (?:i|we) found online\b|\bfrom an? image search\b'
+        note: Something found online is not yours to post. Use it only with permission or a license, or if it is otherwise free to use.
+      - match: '\b(?:trending|popular|viral|hit) (?:song|sound|audio|track|music)\b'
+        note: Music belongs to the people who made it. Use only music you are entitled to use.
