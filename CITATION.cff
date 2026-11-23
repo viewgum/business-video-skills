@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use these rules or skills, please credit them as below."
+type: software
+title: "Business Video Skills: short video plans and sourced ad and claim rules for small businesses"
+authors:
+  - name: "ViewGum"
+    website: "https://viewgum.com"
+repository-code: "https://github.com/viewgum/business-video-skills"
+url: "https://viewgum.com/for"
+license: CC-BY-4.0
+keywords:
+  - small business
+  - short-form video
+  - ad compliance
+  - content calendar

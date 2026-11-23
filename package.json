@@ -4,6 +4,24 @@
   "type": "module",
   "description": "Short video plans and sourced ad and claim rules for small businesses: agent skills, a YAML dataset and a zero-dependency claim checker.",
   "license": "CC-BY-4.0",
+  "author": "ViewGum (https://viewgum.com)",
+  "homepage": "https://github.com/viewgum/business-video-skills#readme",
+  "bugs": "https://github.com/viewgum/business-video-skills/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viewgum/business-video-skills.git"
+  },
+  "keywords": [
+    "agent-skills",
+    "small-business",
+    "marketing",
+    "short-form-video",
+    "tiktok",
+    "instagram-reels",
+    "youtube-shorts",
+    "content-calendar",
+    "ad-compliance"
+  ],
   "scripts": {
     "test": "node test.mjs",
     "build": "node scripts/build.mjs",

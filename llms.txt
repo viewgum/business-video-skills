@@ -1,0 +1,18 @@
+# Business Video Skills
+
+> Free short video plans for small businesses: 12 agent skills, one per industry group, that turn a few lines about a business
+> into 15 TikTok, Instagram Reels and YouTube Shorts ideas, a 30-day posting calendar and a caption starter for each posting day, with
+> 35 ad and claim rules by industry in YAML (what each source says, the practice for shorts, the source and the day it was read)
+> and a zero-dependency claim checker. CC BY 4.0.
+
+- [README](https://github.com/viewgum/business-video-skills/blob/main/README.md): the 12 groups, install steps and an example
+- [rules/README.md](https://github.com/viewgum/business-video-skills/blob/main/rules/README.md): every rule with its source
+- [skills/](https://github.com/viewgum/business-video-skills/tree/main/skills): one SKILL.md per industry group
+- [checker/check.mjs](https://github.com/viewgum/business-video-skills/blob/main/checker/check.mjs): the claim checker (Node 18+)
+- [examples/](https://github.com/viewgum/business-video-skills/tree/main/examples): dated, unedited example runs
+
+Install: npx skills add viewgum/business-video-skills
+
+## Related
+
+- [Short videos for small businesses, by industry](https://viewgum.com/for): the same rules beside each industry's page
